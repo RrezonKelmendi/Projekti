@@ -59,3 +59,62 @@
                     <div class="product-image">
                         <img src="images/kockaperloj.jpeg" alt="Kocka për Lojë" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 2;">
                     </div>
+                    <h3>Kocka për Lojë</h3>
+                    <p class="product-description">Kocka e qëndrueshme për qentë, me materiale natyrore dhe të sigurta</p>
+                    <p class="product-price">12€</p>
+                    <button class="btn-primary" onclick="addToCart('Kocka për Lojë', 12)">Bli Tani</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/lojrapermac.jpg" alt="Lojëra për Mace" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 2;">
+                    </div>
+                    <h3>Lojëra për Mace</h3>
+                    <p class="product-description">Set me lojëra të ndryshme: topa, shufra, dhe lojëra interaktive</p>
+                    <p class="product-price">20€</p>
+                    <button class="btn-primary" onclick="addToCart('Lojëra për Mace', 20)">Bli Tani</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/shtepipermac.jpeg" alt="Shtëpi për Mace" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 2;">
+                    </div>
+                    <h3>Shtëpi për Mace</h3>
+                    <p class="product-description">Shtëpi e bukur dhe e rehatshme, me materiale natyrore. Përmasat: 50x40x35cm</p>
+                    <p class="product-price">60€</p>
+                    <button class="btn-primary" onclick="addToCart('Shtëpi për Mace', 60)">Bli Tani</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/eneperushqim.jpeg" alt="Enë për Ushqim" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 2;">
+                    </div>
+                    <h3>Enë për Ushqim</h3>
+                    <p class="product-description">Set me 2 enë çeliku, të lehtë për pastrim dhe të qëndrueshme</p>
+                    <p class="product-price">18€</p>
+                    <button class="btn-primary" onclick="addToCart('Enë për Ushqim', 18)">Bli Tani</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 MalvinPetCare. Të gjitha të drejtat e rezervuara.</p>
+        </div>
+    </footer>
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const logoutBtn = document.getElementById('logoutBtn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (confirm('Jeni të sigurt që dëshironi të dilni?')) {
+                    localStorage.removeItem('isLoggedIn');
+                    localStorage.removeItem('currentUser');
+                    window.location.href = 'index.html';
+                }
+            });
+        }
+    });
+    </script>
+</html>
