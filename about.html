@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption & Shop - About Us</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>🐾 MalvinPetCare</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="adoption.html">Adoption</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" id="logoutBtn">Dil</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="about-header">
+        <div class="container">
+            <h1>Rreth Nesh</h1>
+        </div>
+    </section>
+
+    <section class="about-content">
+        <div class="container">
+            <div class="about-section">
+                <h2>Misioni Ynë</h2>
+                <p>MalvinPetCare është një platformë e dedikuar për të lidhur kafshët me familje dashurose. Misioni ynë është të sigurojmë që çdo kafshë të ketë një shtëpi të sigurt dhe dashurose, dhe të ofrojmë produkte cilësore për kujdesin e tyre.</p>
+            </div>
+            <div class="about-section">
+                <h2>Çfarë Ofrojmë</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-icon">🛒</div>
+                        <h3>Shop Online</h3>
+                        <p>Produkte të shumta për kafshët tuaja - nga ushqim deri te pajisje</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">❤️</div>
+                        <h3>Adoptim</h3>
+                        <p>Ndihmë për të gjetur kafshën tuaj të re dhe për të dhuruar kafshë</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">🏠</div>
+                        <h3>Strehim</h3>
+                        <p>Strehim dhe kujdes profesional për kafshët</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">👥</div>
+                        <h3>Komunitet</h3>
+                        <p>Lidhje me familje të tjera që kujdesen për kafshë</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-section">
+                <h2>Historia Jonë</h2>
+                <p>MalvinPetCare u krijua në 2025 me qëllimin e ndihmës për kafshët e braktisura dhe për të ofruar një platformë ku familjet mund të gjejnë dhe të kujdesen për kafshët. Që nga fillimi, kemi ndihmuar mbi 1000 kafshë të gjejnë shtëpi të reja dhe kemi ofruar produkte cilësore për mijëra familje.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 MalvinPetCare. Të gjitha të drejtat e rezervuara.</p>
+        </div>
+    </footer>
+</body>
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    const logoutBtn = document.getElementById('logoutBtn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (confirm('Jeni të sigurt që dëshironi të dilni?')) {
+                localStorage.removeItem('isLoggedIn');
+                localStorage.removeItem('currentUser');
+                window.location.href = 'index.html';
+            }
+        });
+    }
+});
+</script>
+</html>
+
