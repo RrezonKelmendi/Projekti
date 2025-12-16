@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption & Shop - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>🐾 MalvinPetCare</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="adoption.html">Adoption</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" id="logoutBtn">Dil</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Mirë se vini në MalvinPetCare</h1>
+            <p>Gjeni mikun tuaj të ri ose blini çfarë ju nevojitet për kafshët tuaja</p>
+            <div class="hero-buttons">
+                <a href="shop.html" class="btn-primary">Shiko Produktet</a>
+                <a href="adoption.html" class="btn-secondary">Adopto Kafshë</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Çfarë mund të bëni këtu?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛒</div>
+                    <h3>Bli Produkte</h3>
+                    <p>Gjeni ushqim, pajisje dhe aksesorë për kafshët tuaja</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">❤️</div>
+                    <h3>Adopto Kafshë</h3>
+                    <p>Gjeni mikun tuaj të ri dhe jepni një shtëpi të re</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Dhuro Kafshë</h3>
+                    <p>Ndani dashurinë tuaj duke dhuruar kafshë për familje të tjera</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Kujdes Profesional</h3>
+                    <p>Kujdes dhe strehim për kafshët tuaja</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="latest-news">
+        <div class="container">
+            <h2 class="section-title">Lajmet e Fundit</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image">📢</div>
+                    <h3>Zbritje e Madhe!</h3>
+                    <p>Deri në 30% zbritje për të gjitha produktet e ushqimit për kafshë</p>
+                    <span class="news-date">15 Shkurt 2024</span>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">🐕</div>
+                    <h3>Kafshë të Reja për Adoptim</h3>
+                    <p>Kemi ardhur me 20 kafshë të reja që presin një shtëpi të re</p>
+                    <span class="news-date">10 Shkurt 2024</span>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">🎉</div>
+                    <h3>Program i Ri i Adoptimit</h3>
+                    <p>Programi ynë i ri për adoptim me mbështetje të plotë për familjet</p>
+                    <span class="news-date">5 Shkurt 2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="promo-section">
+        <div class="container">
+            <div class="promo-banner">
+                <h2>Oferta Speciale - 25% Zbritje</h2>
+                <p>Për të gjitha produktet e pajisjeve për kafshë këtë muaj</p>
+                <a href="shop.html" class="btn-primary">Shiko Ofertat</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 MalvinPetCare. Të gjitha të drejtat e rezervuara.</p>
+        </div>
+    </footer>
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const logoutBtn = document.getElementById('logoutBtn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (confirm('Jeni të sigurt që dëshironi të dilni?')) {
+                    localStorage.removeItem('isLoggedIn');
+                    localStorage.removeItem('currentUser');
+                    window.location.href = 'index.html';
+                }
+            });
+        }
+    });
+    </script>
+</html>
+
