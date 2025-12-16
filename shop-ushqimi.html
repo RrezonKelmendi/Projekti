@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption & Shop - Ushqim</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>🐾 MalvinPetCare</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="adoption.html">Adoption</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" id="logoutBtn">Dil</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="shop-header">
+        <div class="container">
+            <h1>Ushqim për Kafshë</h1>
+            <p>Ushqim cilësor dhe i shëndetshëm</p>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/ushqimperqen.jpeg" alt="Ushqim për Qen - Premium" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 2;">
+                    </div>
+                    <h3>Ushqim për Qen - Premium</h3>
+                    <p class="product-description">15kg, ushqim i plotë dhe i balancuar me mish, perime dhe vitamina</p>
+                    <p class="product-price">35€</p>
+                    <button class="btn-primary" onclick="addToCart('Ushqim për Qen - Premium', 35)">Bli Tani</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/ushqimpermaca.jpeg" alt="Ushqim për Mace - Premium" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 2;">
+                    </div>
+                    <h3>Ushqim për Mace - Premium</h3>
+                    <p class="product-description">10kg, me peshk dhe mish, i balancuar për shëndetin e maces</p>
+                    <p class="product-price">28€</p>
+                    <button class="btn-primary" onclick="addToCart('Ushqim për Mace - Premium', 28)">Bli Tani</button>
+                </div>
