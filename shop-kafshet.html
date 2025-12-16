@@ -34,3 +34,87 @@
             <p>Zgjidhni kafshën tuaj të re dhe bëjeni pjesë të një familje të re</p>
         </div>
     </section>
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid" id="animalsGrid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Dog1-buy.jpg" alt="Qen - White Shadow" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+                    </div>
+                    <h3>Qen - White Shadow</h3>
+                    <p class="product-description">Qen i dashur dhe aktiv, 2 vjeç. I trajnuar mirë dhe i shëndetshëm.</p>
+                    <p class="product-price">500€</p>
+                    <button class="btn-primary" onclick="addToCart('Qen - White Shadow', 500)">Bli Tani</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Cat1-buy.jpg" alt="Mace - Tooby" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+                    </div>
+                    <h3>Mace - Tooby</h3>
+                    <p class="product-description">Mace e qetë dhe miqësore, 1 vjeç. Me gishtërinj të vegjel dhe shumë e qetë.</p>
+                    <p class="product-price">300€</p>
+                    <button class="btn-primary" onclick="addToCart('Mace - Toby', 300)">Bli Tani</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/rabbit1-buy.jpg" alt="Lepur - Angora" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+                    </div>
+                    <h3>Lepur - Angora</h3>
+                    <p class="product-description">Lepur i bukur dhe i qetë, 6 muaj. Me lesh të gjatë dhe karakter të dashur.</p>
+                    <p class="product-price">150€</p>
+                    <button class="btn-primary" onclick="addToCart('Lepur - Angora', 150)">Bli tani</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/hamster1-buy.jpg" alt="Hamster - Syrian" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+                    </div>
+                    <h3>Hamster - Syrian</h3>
+                    <p class="product-description">Hamster aktiv dhe i qetë , 2 muaj. I përshtatshëm për fëmijë.</p>
+                    <p class="product-price">60€</p>
+                    <button class="btn-primary" onclick="addToCart('Hamster - Syrian', 60)">Bli Tani</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/bird1-buy.jpg" alt="Zog - Kanarin" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+                    </div>
+                    <h3>Zog - Kanarin</h3>
+                    <p class="product-description">Zog i bukur dhe këndues, 1 vjeç. Me zë të bukur dhe ngjyra terheqëse.</p>
+                    <p class="product-price">80€</p>
+                    <button class="btn-primary" onclick="addToCart('Zog - Kanarin', 80)">Bli Tani</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/turtle1-buy.jpeg" alt="Breshkë - Ujore" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+                    </div>
+                    <h3>Breshkë - Ujore</h3>
+                    <p class="product-description">Breshkë e shëndetshme, 2 vjeç. Kujdes i lehtë dhe karakter i qetë.</p>
+                    <p class="product-price">90€</p>
+                    <button class="btn-primary" onclick="addToCart('Breshkë - Ujore', 40)">Bli Tani</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 MalvinPetCare. Të gjitha të drejtat e rezervuara.</p>
+        </div>
+    </footer>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const logoutBtn = document.getElementById('logoutBtn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (confirm('Jeni të sigurt që dëshironi të dilni?')) {
+                    localStorage.removeItem('isLoggedIn');
+                    localStorage.removeItem('currentUser');
+                    window.location.href = 'index.html';
+                }
+            });
+        }
+    });
+    </script>
+</html>
+
