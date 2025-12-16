@@ -27,10 +27,51 @@
             </div>
         </div>
     </nav>
-
-    <section class="shop-header">
+    <section class="shop-categories">
         <div class="container">
-            <h1>Shop</h1>
-            <p>Zgjidhni kategorinë që ju intereson</p>
+            <div class="category-grid">
+                <div class="category-card" onclick="window.location.href='shop-animals.html'">
+                    <div class="category-icon">🐕</div>
+                    <h2>Merr mikun tuaj të ri</h2>
+                    <p>Zgjidhni kafshën tuaj të re nga koleksioni ynë</p>
+                    <button class="btn-primary">Shiko Kafshët</button>
+                </div>
+                <div class="category-card" onclick="window.location.href='shop-equipment.html'">
+                    <div class="category-icon">🛠️</div>
+                    <h2>Pajisje për Kafshë</h2>
+                    <p>Gjeni pajisje dhe aksesorë për kafshët tuaja</p>
+                    <button class="btn-primary">Shiko Pajisjet</button>
+                </div>
+                <div class="category-card" onclick="window.location.href='shop-food.html'">
+                    <div class="category-icon">🍖</div>
+                    <h2>Ushqim për Kafshë</h2>
+                    <p>Ushqim cilësor dhe i shëndetshëm për kafshët tuaja</p>
+                    <button class="btn-primary">Shiko Ushqimin</button>
+                </div>
+            </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 MalvinPetCare. Të gjitha të drejtat e rezervuara.</p>
+        </div>
+    </footer>
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const logoutBtn = document.getElementById('logoutBtn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (confirm('Jeni të sigurt që dëshironi të dilni?')) {
+                    localStorage.removeItem('isLoggedIn');
+                    localStorage.removeItem('currentUser');
+                    window.location.href = 'index.html';
+                }
+            });
+        }
+    });
+    </script>
+</html>
