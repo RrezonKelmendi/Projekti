@@ -95,3 +95,318 @@
                 </div>
             </div>
         </div>
+        <style>
+            .donate-pets-gallery {
+                padding: 60px 0;
+                background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            }
+            
+            .section-title {
+                text-align: center;
+                margin-bottom: 50px;
+                font-size: 2.5rem;
+                color: #2c3e50;
+                position: relative;
+                padding-bottom: 15px;
+            }
+            
+            .section-title::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100px;
+                height: 4px;
+                background: linear-gradient(90deg, #3498db, #2ecc71);
+                border-radius: 2px;
+            }
+            
+            .pets-gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 30px;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+            
+            .pet-gallery-item {
+                text-align: center;
+                transition: transform 0.3s ease;
+            }
+            
+            .pet-gallery-item:hover {
+                transform: translateY(-10px);
+            }
+            
+            .pet-gallery-item h3 {
+                margin-top: 20px;
+                font-size: 1.5rem;
+                color: #34495e;
+                transition: color 0.3s ease;
+            }
+            
+            .pet-gallery-item:hover h3 {
+                color: #e74c3c;
+            }
+            
+            /* Wrapper për imazhin me efekt 3D */
+            .image-wrapper {
+                width: 250px;
+                height: 250px;
+                margin: 0 auto;
+                border-radius: 20px;
+                overflow: hidden;
+                position: relative;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                cursor: pointer;
+            }
+            
+            .pet-gallery-item:hover .image-wrapper {
+                transform: rotateY(15deg) rotateX(5deg) scale(1.05);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            }
+            
+            .image-wrapper img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.5s ease;
+                filter: brightness(0.95);
+            }
+            
+            .pet-gallery-item:hover .image-wrapper img {
+                transform: scale(1.1);
+                filter: brightness(1.05);
+            }
+            
+            /* Overlay efekt */
+            .image-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, rgba(52, 152, 219, 0.9), rgba(46, 204, 113, 0.9));
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity 0.5s ease;
+                border-radius: 20px;
+            }
+            
+            .pet-gallery-item:hover .image-overlay {
+                opacity: 1;
+            }
+            
+            .image-overlay span {
+                color: white;
+                font-size: 1.1rem;
+                font-weight: 600;
+                text-align: center;
+                padding: 20px;
+                transform: translateY(20px);
+                transition: transform 0.5s ease;
+            }
+            
+            .pet-gallery-item:hover .image-overlay span {
+                transform: translateY(0);
+            }
+            
+            /* Efekt pulsues në hover */
+            .image-wrapper::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                background: radial-gradient(circle at center, transparent 30%, rgba(255,255,255,0.3) 70%);
+                opacity: 0;
+                transition: opacity 0.5s ease;
+                z-index: 1;
+            }
+            
+            .pet-gallery-item:hover .image-wrapper::before {
+                opacity: 1;
+                animation: pulse 2s infinite;
+            }
+            
+            @keyframes pulse {
+                0% {
+                    transform: scale(0.95);
+                    opacity: 0.7;
+                }
+                50% {
+                    transform: scale(1.05);
+                    opacity: 0.9;
+                }
+                100% {
+                    transform: scale(0.95);
+                    opacity: 0.7;
+                }
+            }
+            
+            /* Efekt bordura në hover */
+            .image-wrapper::after {
+                content: '';
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                right: -2px;
+                bottom: -2px;
+                background: linear-gradient(45deg, #3498db, #2ecc71, #e74c3c, #f1c40f);
+                border-radius: 22px;
+                z-index: -1;
+                opacity: 0;
+                transition: opacity 0.5s ease;
+            }
+            
+            .pet-gallery-item:hover .image-wrapper::after {
+                opacity: 1;
+                animation: rotateBorder 3s linear infinite;
+            }
+            
+            @keyframes rotateBorder {
+                0% {
+                    filter: hue-rotate(0deg);
+                }
+                100% {
+                    filter: hue-rotate(360deg);
+                }
+            }
+            
+            /* Responsive design */
+            @media (max-width: 768px) {
+                .image-wrapper {
+                    width: 200px;
+                    height: 200px;
+                }
+                
+                .pets-gallery-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 20px;
+                }
+                
+                .section-title {
+                    font-size: 2rem;
+                }
+            }
+            
+            @media (max-width: 480px) {
+                .image-wrapper {
+                    width: 180px;
+                    height: 180px;
+                }
+                
+                .pets-gallery-grid {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                }
+            }
+        </style>
+    </section>
+    
+
+    <section class="donate-form-section">
+        <div class="container">
+            <div class="form-container">
+                <form id="donateForm">
+                    <h2>Informacionet e Donatorit</h2>
+                    <div class="form-group">
+                        <label for="donorName">Emri i Plotë</label>
+                        <input type="text" id="donorName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="donorEmail">Email</label>
+                        <input type="email" id="donorEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="donorPhone">Telefoni</label>
+                        <input type="tel" id="donorPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="donorAddress">Adresa</label>
+                        <input type="text" id="donorAddress" required>
+                    </div>
+
+                    <h2>Informacionet e Kafshës</h2>
+                    <div class="form-group">
+                        <label for="petName">Emri i Kafshës</label>
+                        <input type="text" id="petName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="petType">Lloji i Kafshës</label>
+                        <select id="petType" required>
+                            <option value="">Zgjidhni...</option>
+                            <option value="qen">Qen</option>
+                            <option value="mace">Mace</option>
+                            <option value="lepur">Lepur</option>
+                            <option value="hamster">Hamster</option>
+                            <option value="zog">Zog</option>
+                            <option value="tjetër">Tjetër</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="petAge">Mosha</label>
+                        <input type="text" id="petAge" placeholder="p.sh. 2 vjeç" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="petGender">Gjinia</label>
+                        <select id="petGender" required>
+                            <option value="">Zgjidhni...</option>
+                            <option value="mashkull">Mashkull</option>
+                            <option value="femër">Femër</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="petDescription">Përshkrimi i Kafshës</label>
+                        <textarea id="petDescription" rows="4" placeholder="Përshkruani kafshën tuaj..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="petHealth">Gjendja Shëndetësore</label>
+                        <textarea id="petHealth" rows="3" placeholder="Informacione për shëndetin e kafshës..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="petPhoto">Ngarko Foto të Kafshës</label>
+                        <input type="file" id="petPhoto" accept="image/*" multiple required>
+                        <small>Mund të ngarkoni disa foto për konfirmim</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="donationReason">Arsyeja e Dhurimit</label>
+                        <textarea id="donationReason" rows="3" placeholder="Pse dëshironi të dhuroni këtë kafshë?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-large">Dërgo Kërkesën</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 MalvinPetCare. Të gjitha të drejtat e rezervuara.</p>
+        </div>
+    </footer>
+    </body> 
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const logoutBtn = document.getElementById('logoutBtn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    if (confirm('Jeni të sigurt që dëshironi të dilni?')) {
+                        localStorage.removeItem('isLoggedIn');
+                        localStorage.removeItem('currentUser');
+                        window.location.href = 'index.html';
+                    }
+                });
+            }
+        });
+        </script>
+</html>
+
