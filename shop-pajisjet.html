@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption & Shop - Pajisje</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>🐾 MalvinPetCare</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="adoption.html">Adoption</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" id="logoutBtn">Dil</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="shop-header">
+        <div class="container">
+            <h1>Pajisje për Kafshë</h1>
+            <p>Gjeni pajisje dhe aksesorë për kafshët tuaja</p>
+        </div>
+    </section>
+<section class="products-section">
+        <div class="container">
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/shtratperqen.jpeg" alt="Shtrat për Qen" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 2;">
+                    </div>
+                    <h3>Shtrat për Qen</h3>
+                    <p class="product-description">Shtrat i rehatshëm dhe i butë, me materiale cilësore. Përmasat: 80x60cm</p>
+                    <p class="product-price">45€</p>
+                    <button class="btn-primary" onclick="addToCart('Shtrat për Qen', 45)">Bli Tani</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/topaperqen.jpeg" alt="Topa për Lojë" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 2;">
+                    </div>
+                    <h3>Topa për Lojë</h3>
+                    <p class="product-description">Set me 5 topa për lojë, të qëndrueshme dhe të sigurta për kafshët</p>
+                    <p class="product-price">15€</p>
+                    <button class="btn-primary" onclick="addToCart('Topa për Lojë', 15)">Bli Tani</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/kockaperloj.jpeg" alt="Kocka për Lojë" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 2;">
+                    </div>
