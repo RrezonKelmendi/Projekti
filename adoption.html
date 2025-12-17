@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Adoption & Shop - Adoption</title>
+    <link rel="stylesheet" href="css/adoption.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -42,13 +43,13 @@
                     <div class="adoption-icon">❤️</div>
                     <h2>Adopto Kafshë</h2>
                     <p>Shikoni kafshët që presin një shtëpi të re</p>
-                    <a href="adopt-pets.html" class="btn-primary">Shiko Kafshët për Adoptim</a>
+                    <a href="adopt-kafshet.html" class="btn-primary">Shiko Kafshët për Adoptim</a>
                 </div>
                 <div class="adoption-card">
                     <div class="adoption-icon">🎁</div>
                     <h2>Dhuro Kafshë</h2>
                     <p>Dhuroni kafshën tuaj për familje të tjera</p>
-                    <a href="donate-pet.html" class="btn-primary">Dhuro Kafshë</a>
+                    <a href="donate-kafshet.html" class="btn-primary">Dhuro Kafshë</a>
                 </div>
             </div>
         </div>
@@ -109,7 +110,7 @@
                             <span>Breshkat janë të qeta dhe të qëndrueshme</span>
                         </div>
                     </div>
-                    <h3>Breshkë</h3>
+                    <h3>Breshke</h3>
                 </div>
             </div>
         </div>
@@ -170,7 +171,6 @@
         color: #e74c3c;
     }
     
-    /* Wrapper për imazhin me efekt 3D */
     .image-wrapper {
         width: 250px;
         height: 250px;
@@ -187,8 +187,7 @@
         transform: rotateY(15deg) rotateX(5deg) scale(1.05);
         box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     }
-    
-    .image-wrapper img {
+     .image-wrapper img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -201,7 +200,6 @@
         filter: brightness(1.05);
     }
     
-    /* Overlay efekt */
     .image-overlay {
         position: absolute;
         top: 0;
@@ -235,7 +233,6 @@
         transform: translateY(0);
     }
     
-    /* Efekt pulsues në hover */
     .image-wrapper::before {
         content: '';
         position: absolute;
@@ -269,8 +266,7 @@
             opacity: 0.7;
         }
     }
-    
-    /* Efekt bordura në hover */
+
     .image-wrapper::after {
         content: '';
         position: absolute;
@@ -298,8 +294,7 @@
             filter: hue-rotate(360deg);
         }
     }
-    
-    /* Responsive design */
+
     @media (max-width: 768px) {
         .image-wrapper {
             width: 200px;
@@ -354,4 +349,3 @@
 </html>
 
 
-    
