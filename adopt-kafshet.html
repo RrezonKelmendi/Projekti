@@ -56,3 +56,76 @@
                         <span style="font-size: 6rem;">🐱</span>
                     </div>
                     <h3>Luna - Mace</h3>
+                    <p><strong>Mosha:</strong> 2 vjeç</p>
+                    <p><strong>Gjinia:</strong> Femër</p>
+                    <p><strong>Rasa:</strong> Persiane</p>
+                    <p><strong>Përshkrimi:</strong> Mace e qetë dhe miqësore, me karakter të butë dhe dashur.</p>
+                    <button class="btn-primary" onclick="adoptPet('Luna - Mace')">Adopto</button>
+                </div>
+                <div class="adopt-card">
+                    <div class="adopt-image" style="background: linear-gradient(135deg, #fff8dc 0%, #ffe4b5 100%);">
+                        <img src="images/rabbit.jpg" alt="Lepur - Angora" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+                        <span style="font-size: 6rem;">🐰</span>
+                    </div>
+                    <h3>Bunny - Lepur</h3>
+                    <p><strong>Mosha:</strong> 1 vjeç</p>
+                    <p><strong>Gjinia:</strong> Femër</p>
+                    <p><strong>Rasa:</strong> Angora</p>
+                    <p><strong>Përshkrimi:</strong> Lepur i qetë dhe i dashur, me lesh të gjatë dhe karakter të butë.</p>
+                    <button class="btn-primary" onclick="adoptPet('Bunny - Lepur')">Adopto</button>
+                </div>
+                <div class="adopt-card">
+                    <div class="adopt-image" style="background: linear-gradient(135deg, #dda0dd 0%, #ee82ee 100%);">
+                        <span style="font-size: 6rem;">🐹</span>
+                        <img src="images/hamster.jpg" alt="Hamster - Syrian" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+                    </div>
+                    <h3>Hammy - Hamster</h3>
+                    <p><strong>Mosha:</strong> 6 muaj</p>
+                    <p><strong>Gjinia:</strong> Mashkull</p>
+                    <p><strong>Rasa:</strong> Syrian</p>
+                    <p><strong>Përshkrimi:</strong> Hamster aktiv dhe i gjallë, i përshtatshëm për fëmijë.</p>
+                    <button class="btn-primary" onclick="adoptPet('Hammy - Hamster')">Adopto</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 MalvinPetCare. Të gjitha të drejtat e rezervuara.</p>
+        </div>
+    </footer>
+    <script>
+        function adoptPet(petName) {
+            if (confirm(`Jeni të sigurt që dëshironi të adoptoni ${petName}?`)) {
+                const adoptions = JSON.parse(localStorage.getItem('adoptions') || '[]');
+                const adoption = {
+                    petName: petName,
+                    date: new Date().toISOString(),
+                    user: JSON.parse(localStorage.getItem('currentUser') || '{}')
+                };
+                adoptions.push(adoption);
+                localStorage.setItem('adoptions', JSON.stringify(adoptions));
+                alert(`Kërkesa juaj për adoptimin e ${petName} u dërgua me sukses! Do të kontaktoheni së shpejti.`);
+            }
+        }
+    </script>
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const logoutBtn = document.getElementById('logoutBtn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (confirm('Jeni të sigurt që dëshironi të dilni?')) {
+                    localStorage.removeItem('isLoggedIn');
+                    localStorage.removeItem('currentUser');
+                    window.location.href = 'index.html';
+                }
+            });
+        }
+    });
+    </script>
+</html>
+
